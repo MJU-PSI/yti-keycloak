@@ -1,3 +1,2 @@
 #!/bin/bash
-
-docker build -t yti-keycloak .
+docker build -t yti-keycloak:latest .
