@@ -13,4 +13,4 @@ sed -i -e 's#<web-context>auth<\/web-context>#<web-context>'"$HTTP_RELATIVE_PATH
 sed -i -e 's#<web-context>auth<\/web-context>#<web-context>'"$HTTP_RELATIVE_PATH"'auth<\/web-context>#' /opt/jboss/keycloak/standalone/configuration/standalone-ha.xml
 sed -i -e 's#\/auth#\/'"$HTTP_RELATIVE_PATH"'auth#' /opt/jboss/keycloak/welcome-content/index.html 
 
-/opt/jboss/tools/docker-entrypoint.sh
+/opt/jboss/tools/docker-entrypoint.sh -b=0.0.0.0 -bmanagement=0.0.0.0
